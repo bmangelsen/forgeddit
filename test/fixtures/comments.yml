@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bens_comment:
+  user_id: ben
+  post_id: bens_post
+  content: Cool pic bro
+
+russells_comment:
+  user_id: russell
+  post_id: russells_post
+  content: Cool pic bro
+
+alexs_comment:
+  user_id: alex
+  post_id: alexs_post
+  content: Cool pic bro

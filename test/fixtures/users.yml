@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ben:
+  username: Ben
+  email: myemail@loljk.com
+
+russell:
+  username: Russell
+  email: russellsemail@loljk.com
+
+alex:
+  username: Alex
+  email: alexsemail@loljk.com
