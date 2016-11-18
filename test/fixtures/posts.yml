@@ -3,14 +3,14 @@
 bens_post:
   name: Cat pic
   link: https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg
-  user_id: ben
+  user: ben
 
 russells_post:
   name: Cat pic
   link: https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg
-  user_id: russell
+  user: russell
 
 alexs_post:
   name: Cat pic
   link: https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg
-  user_id: alex
+  user: alex
