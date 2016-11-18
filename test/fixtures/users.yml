@@ -3,11 +3,15 @@
 ben:
   username: Ben
   email: myemail@loljk.com
+  password_hash: <%= BCrypt::Password.create("test") %>
 
 russell:
   username: Russell
   email: russellsemail@loljk.com
+  password_hash: <%= BCrypt::Password.create("test") %>
+
 
 alex:
   username: Alex
   email: alexsemail@loljk.com
+  password_hash: <%= BCrypt::Password.create("test") %>

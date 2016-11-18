@@ -1,0 +1,10 @@
+<p>
+  Here are all your posts!
+</p>
+
+<hr>
+
+<% @posts.each do |post| %>
+  <%= link_to "#{post.name}", post_path(post.id) %>
+  <hr>
+<% end %>

@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-ben = User.create!(username: "Ben", email: "myemail@loljk.com")
-russell = User.create!(username: "Russell", email: "russellsemail@loljk.com")
-alex = User.create!(username: "Alex", email: "alexsemail@loljk.com")
+ben = User.create!(username: "Ben", email: "myemail@loljk.com", password: "test")
+russell = User.create!(username: "Russell", email: "russellsemail@loljk.com", password: "test")
+alex = User.create!(username: "Alex", email: "alexsemail@loljk.com", password: "test")
 
 bens_post = ben.posts.create!(name: "Cat pic", link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
 russells_post = russell.posts.create!(name: "Cat pic", link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")

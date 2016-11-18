@@ -4,7 +4,8 @@ class User < ApplicationRecord
   has_many :posts
   validates :username, presence: true
   validates :email, presence: true
-  validates :password, presence: true, confirmation: true
+  validates :password, presence: true, :on => :create
+  validates :password, confirmation: true
 
   def authorize!(unhashed_password)
     @_bcrypt_password ||= BCrypt::Password.new(password_hash)

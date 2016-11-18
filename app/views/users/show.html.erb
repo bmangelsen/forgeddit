@@ -1,0 +1,11 @@
+<h4>Your Profile</h4>
+
+<p>
+  <span>Username</span>: <%= current_user.username %>
+</p>
+<p>
+  <span>Email</span>: <%= current_user.email %>
+</p>
+
+<%= link_to "Update Info", edit_user_path(current_user.id), class: "btn btn-default btn-sm" %>
+<%= link_to "Change Password", edit_password_user_path(current_user.id), class: "btn btn-default btn-sm" %>
