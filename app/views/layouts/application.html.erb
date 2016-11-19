@@ -27,13 +27,11 @@
           <% end %>
         </ul>
         <ul id="post_list_links" class="nav navbar-nav navbar-right">
-
           <% if current_user %>
             <li><%= link_to "Create Post", new_post_path %>
             <li><%= link_to "Your Posts", user_posts_path(current_user.id) %></li>
           <% end %>
             <li><%= link_to "All Posts", posts_path %></li>
-
         </ul>
       </nav>
     <%= yield %>

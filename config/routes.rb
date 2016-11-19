@@ -9,9 +9,10 @@ Rails.application.routes.draw do
     resources :posts, only: [:index], action: :user_posts
   end
 
-  resources :posts
-
-  resource :comments, only: [:new, :create, :edit, :destroy, :update]
+  resources :posts do
+    resources :comments, only: [:new, :create, :edit, :destroy, :update]
+    resources :comments, only: [:index], action: :post_comments
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

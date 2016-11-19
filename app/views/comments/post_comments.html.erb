@@ -1,0 +1,25 @@
+<p><%= link_to "Add comment to post", new_post_comment_path(@post.id), class: 'btn btn-default btn-info btn-xs'%></p>
+
+<h4>Comments for this post:</h4>
+
+<%= link_to "#{@post.name}", @post.link %>
+
+<hr>
+
+<% @comments.each do |comment| %>
+<div>
+  <div id="content">
+    <span><%= User.find(comment.user_id).username %> says</span>:
+    <%= comment.content %>
+  </div>
+  <div id="options">
+    <% if current_user %>
+      <% if comment.user_id == current_user.id %>
+        <%= link_to "Edit", edit_post_comment_path(@post.id, comment.id), class: 'btn btn-default btn-success btn-xs' %>
+        <%= link_to "Delete", post_comment_path(@post.id, comment.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<hr>
+<% end %>

@@ -1,0 +1,14 @@
+<% @comment.errors.full_messages.each do |error| %>
+  <%= error %>!
+<% end %>
+
+<h4>Edit the details of your comment!</h4>
+
+<%= form_for @comment, url: post_comment_path(@post.id, @comment.id) do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: "form-control" %>
+
+  <hr>
+
+  <%= f.submit class: 'btn btn-default btn-success' %>
+<% end %>

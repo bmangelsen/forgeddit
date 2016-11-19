@@ -33,7 +33,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test "can edit post" do
     post session_path, params: { username: users(:ben).username, password: "test" }
     patch post_path(posts(:bens_post).id), params: { post: { name: "new post name" }}
-    assert_equal "new post name", Post.find_by(id: posts(:bens_post).id).name
+    assert_equal "new post name", Post.find(posts(:bens_post).id).name
   end
 
   test "can delete post" do

@@ -10,4 +10,10 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     post session_path, params: { username: users(:ben).username, password: "test" }
     assert_equal users(:ben).id, session["current_user_id"]
   end
+
+  test "can terminate session" do
+    post session_path, params: { username: users(:ben).username, password: "test" }
+    delete session_path(users(:ben).id)
+    assert_equal nil, session["current_user_id"]
+  end
 end

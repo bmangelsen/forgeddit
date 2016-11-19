@@ -43,5 +43,4 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     post session_path, params: { username: users(:ben).username, password: "hooray" }
     assert_equal (users(:ben).id), session["current_user_id"]
   end
-
 end
