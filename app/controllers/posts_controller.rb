@@ -42,6 +42,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:name, :link, :user_id)
   end
-
-  # @animals = Animal.where("name LIKE ? OR species LIKE ?", "%#{params['q']}%", "%#{params['q']}%")
 end

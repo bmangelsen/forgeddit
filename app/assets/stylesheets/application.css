@@ -21,21 +21,12 @@ span {
   padding-right: 10px;
 }
 
-#content {
-  display: inline-block;
-}
-
 #options {
   display: inline-block;
   vertical-align: center;
-}
-
-#post_options {
-  display: inline-block;
-}
-
-#created_at {
-  display: inline-block;
-  vertical-align: center;
   float: right;
+}
+
+#main {
+  display: inline-block;
 }

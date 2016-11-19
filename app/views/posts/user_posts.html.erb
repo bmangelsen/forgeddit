@@ -3,10 +3,16 @@
 <hr>
 
 <% @posts.each do |post| %>
-  <%= link_to "#{post.name}", post_path(post.id) %>
-  <% if post.user_id == current_user.id %>
-    <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-default btn-success btn-sm' %>
-    <%= link_to "Delete", post_path(post.id), method: :delete, class: 'btn btn-default btn-danger btn-sm' %>
-  <% end %>
+<div>
+  <div id="main">
+    <%= link_to "#{post.name}", post_path(post.id) %>
+  </div>
+  <div id="options">
+    <% if post.user_id == current_user.id %>
+      <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-default btn-success btn-xs' %>
+      <%= link_to "Delete", post_path(post.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
+    <% end %>
+  </div>
+</div>
   <hr>
 <% end %>

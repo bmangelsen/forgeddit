@@ -4,17 +4,17 @@
 
 <% @posts.each do |post| %>
   <div>
-    <div id="post_options">
+    <div id="main">
       <%= link_to "#{post.name}", post.link %>
-      <%= link_to "View Comments", post_comments_path(post.id), class: 'btn btn-default btn-info btn-xs' %>
+    </div>
+    <div id="options">
       <% if current_user %>
         <% if post.user_id == current_user.id %>
           <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-default btn-success btn-xs' %>
           <%= link_to "Delete", post_path(post.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
         <% end %>
       <% end %>
-    </div>
-    <div id="created_at">
+      <%= link_to "View Comments", post_comments_path(post.id), class: 'btn btn-default btn-info btn-xs' %>
       <span>Post created: </span><%= post.created_at %>
     </div>
   </div>

@@ -6,15 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 ben = User.create!(username: "Ben", email: "myemail@loljk.com", password: "test")
 russell = User.create!(username: "Russell", email: "russellsemail@loljk.com", password: "test")
 alex = User.create!(username: "Alex", email: "alexsemail@loljk.com", password: "test")
 
-bens_post = ben.posts.create!(name: "Cat pic", link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
-russells_post = russell.posts.create!(name: "Cat pic", link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
-alexs_post = alex.posts.create!(name: "Cat pic", link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
+3.times do
+  ben.posts.create!(name: FFaker::Book.title, link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
+  russell.comments.create!(content: FFaker::Tweet.body, post_id: ben.posts.last.id)
+  alex.comments.create!(content: FFaker::Tweet.body, post_id: ben.posts.last.id)
+end
 
-bens_comment = bens_post.comments.create!(content: "Cool pic bro", user_id: ben.id)
-russells_comment = russells_post.comments.create!(content: "Cool pic bro", user_id: russell.id)
-alexs_comment = alexs_post.comments.create!(content: "Cool pic bro", user_id: alex.id)
+3.times do
+  russell.posts.create!(name: FFaker::Book.title, link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
+  ben.comments.create!(content: FFaker::Tweet.body, post_id: russell.posts.last.id)
+  alex.comments.create!(content: FFaker::Tweet.body, post_id: russell.posts.last.id)
+end
+
+3.times do
+  alex.posts.create!(name: FFaker::Book.title, link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
+  ben.comments.create!(content: FFaker::Tweet.body, post_id: alex.posts.last.id)
+  russell.comments.create!(content: FFaker::Tweet.body, post_id: alex.posts.last.id)
+end

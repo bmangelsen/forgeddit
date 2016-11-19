@@ -8,7 +8,7 @@
 
 <% @comments.each do |comment| %>
 <div>
-  <div id="content">
+  <div id="main">
     <span><%= User.find(comment.user_id).username %> says</span>:
     <%= comment.content %>
   </div>
