@@ -1,0 +1,21 @@
+<h4>Here are all your comments!</h4>
+
+<hr>
+
+<% @comments.each do |comment| %>
+<div>
+  <div id="main">
+    <span>Post: </span>
+    <p><%= link_to "#{Post.find(comment.post_id).name}", post_path(comment.post_id) %></p>
+    <span>Comment: </span>
+    <p><%= comment.content %></p>
+    <span>Commented at: </span>
+    <p><%= comment.created_at %></p>
+  </div>
+  <div id="options">
+    <%= link_to "Edit", edit_post_comment_path(comment.post_id, comment.id), class: 'btn btn-default btn-success btn-xs' %>
+    <%= link_to "Delete", post_comment_path(comment.post_id, comment.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
+  </div>
+</div>
+  <hr>
+<% end %>

@@ -1,4 +1,6 @@
-<p><%= link_to "Add comment to post", new_post_comment_path(@post.id), class: 'btn btn-default btn-info btn-xs'%></p>
+<% if current_user %>
+  <p><%= link_to "Add comment to post", new_post_comment_path(@post.id), class: 'btn btn-default btn-info btn-xs'%></p>
+<% end %>
 
 <h4>Comments for this post:</h4>
 

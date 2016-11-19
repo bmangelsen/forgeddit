@@ -1,5 +1,9 @@
-<% current_user.errors.full_messages.each do |error| %>
-  <%= error %>!
+<% if current_user.errors.any? %>
+  <div class="alert alert-danger">
+    <% current_user.errors.full_messages.each do |error| %>
+      <p><%= error %>!</p>
+    <% end %>
+  </div>
 <% end %>
 
 <h4>Update your Info!</h4>
@@ -10,9 +14,6 @@
 
   <%= f.label :email %>
   <%= f.email_field :email, class: "form-control"%>
-
-  <!-- <%= f.hidden_field :password, value: "#{current_user.password}" %>
-  <%= f.hidden_field :password_confirmation, value: "#{current_user.password}" %> -->
 
   <hr>
 

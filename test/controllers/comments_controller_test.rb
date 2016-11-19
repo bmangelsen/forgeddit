@@ -47,4 +47,10 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     delete post_comment_path(posts(:bens_post).id, comments(:bens_comment))
     assert_equal 2, Comment.count
   end
+
+  test "can get user comments index view" do
+    new_session(:ben)
+    get user_comments_path(users(:ben).id)
+    assert_match(/Here are all your comments!/, response.body)
+  end
 end

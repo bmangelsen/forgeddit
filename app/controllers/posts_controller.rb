@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
   end
 
   def user_posts
-    @posts = Post.where("user_id = ?", current_user.id)
+    @posts = Post.where(user_id: "#{current_user.id}").order(created_at: :desc)
   end
 
   def new

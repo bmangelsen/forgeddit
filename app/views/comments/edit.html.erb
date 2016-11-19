@@ -1,5 +1,9 @@
-<% @comment.errors.full_messages.each do |error| %>
-  <%= error %>!
+<% if @comment.errors.any? %>
+  <div class="alert alert-danger">
+    <% @comment.errors.full_messages.each do |error| %>
+      <p><%= error %>!</p>
+    <% end %>
+  </div>
 <% end %>
 
 <h4>Edit the details of your comment!</h4>
