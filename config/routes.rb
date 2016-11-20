@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       patch "/edit_password", action: :update_password
     end
     resources :posts, only: [:index], action: :user_posts
+    resources :posts, only: [:show]
     resources :comments, only: [:index], action: :user_comments
   end
 

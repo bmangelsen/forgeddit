@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  include PostsHelper
   def index
     @posts = Post.order(created_at: :desc)
   end
@@ -9,6 +10,15 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+  end
+
+  def show
+    @post = Post.find(params[:id])
+    if url_exist?(@post.link)
+      redirect_to @post.link
+    else
+      redirect_to "http://www.nooooooooooooooo.com/"
+    end
   end
 
   def create

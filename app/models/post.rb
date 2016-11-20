@@ -3,4 +3,5 @@ class Post < ApplicationRecord
   has_many :comments
   validates :name, presence: true, length: { maximum: 30 }
   validates :link, presence: true
+  validates :link, format: { with: /\A(http|https):\/\//, :message => "must include http:// or https://" }
 end
