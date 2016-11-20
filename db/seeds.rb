@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ben = User.create!(username: "Ben", email: "myemail@loljk.com", password: "test")
-russell = User.create!(username: "Russell", email: "russellsemail@loljk.com", password: "test")
-alex = User.create!(username: "Alex", email: "alexsemail@loljk.com", password: "test")
+ben = User.create!(username: "Ben", email: "myemail@loljk.com", password: "password")
+russell = User.create!(username: "Russell", email: "russellsemail@loljk.com", password: "password")
+alex = User.create!(username: "Alex", email: "alexsemail@loljk.com", password: "password")
 
 3.times do
   ben.posts.create!(name: FFaker::Book.title, link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg")
