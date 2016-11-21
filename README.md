@@ -1,24 +1,3 @@
-# README
+# **Forgeddit!**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+In this assignment we recreate the Reddit post/comment structure in a Rails application. User can create an account and log in, which allows them to create and edit posts and comments. Application uses three models (comment, post, user) and their corresponding controllers, in addition to the session controller, which creates a current_user_id key in the rails session when user logs in.
