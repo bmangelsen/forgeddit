@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'ffaker'
 gem 'public_suffix'
+gem 'simplecov'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

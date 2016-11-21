@@ -5,7 +5,7 @@
 <% @posts.each do |post| %>
 <div>
   <div id="main">
-    <%= link_to "#{post.name}", post_path(post.id) %>
+    <%= link_to "#{post.name}", post.link %>
   </div>
   <div id="options">
     <% if post.user_id == current_user.id %>

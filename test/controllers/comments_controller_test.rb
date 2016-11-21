@@ -53,4 +53,27 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     get user_comments_path(users(:ben).id)
     assert_match(/Here are all your comments!/, response.body)
   end
+
+  test "render new comment view when new comment does not save" do
+    new_session(:ben)
+    post post_comments_path(posts(:bens_post).id), params:
+    {
+      comment:
+      {
+        user_id: users(:ben).id,
+        post_id: posts(:bens_post).id
+      }
+    }
+    assert_match(/Enter the info for your new comment!/, response.body)
+  end
+
+  test "render edit comment view when edit comment does not save" do
+    new_session(:ben)
+    patch post_comment_path(posts(:bens_post).id, comments(:bens_comment)), params:
+    {
+      comment:
+      { content: "" }
+    }
+    assert_match(/Edit the details of your comment!/, response.body)
+  end
 end

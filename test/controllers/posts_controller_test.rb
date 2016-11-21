@@ -53,4 +53,27 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     delete post_path(posts(:bens_post).id)
     assert 2, Post.count
   end
+
+  test "render create view when post does not save on create" do
+    new_session(:ben)
+    post posts_path, params:
+    {
+      post:
+      {
+        link: "https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg",
+        user_id: users(:ben).id
+      }
+    }
+    assert_match(/Enter the info for your new post!/, response.body)
+  end
+
+  test "render edit view when post does not save on update" do
+    new_session(:ben)
+    patch post_path(posts(:bens_post).id), params:
+    {
+      post:
+      { name: "" }
+    }
+    assert_match(/Edit the details of your post!/, response.body)
+  end
 end

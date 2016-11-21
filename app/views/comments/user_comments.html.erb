@@ -6,7 +6,7 @@
 <div>
   <div id="main">
     <span>Post: </span>
-    <p><%= link_to "#{Post.find(comment.post_id).name}", post_path(comment.post_id) %></p>
+    <p><%= link_to "#{Post.find(comment.post_id).name}", "#{Post.find(comment.post_id).link}" %></p>
     <span>Comment: </span>
     <p><%= comment.content %></p>
     <span>Commented at: </span>

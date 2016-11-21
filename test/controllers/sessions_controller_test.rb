@@ -17,4 +17,9 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     delete session_path(users(:ben).id)
     assert_equal nil, session["current_user_id"]
   end
+
+  test "error message shows when incorrect login" do
+    post session_path, params: { username: users(:ben).username, password: "tst" }
+    assert_match(/Wrong password\/username combo!/, response.body)
+  end
 end

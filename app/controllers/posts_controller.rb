@@ -12,15 +12,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def show
-    @post = Post.find(params[:id])
-    if url_exist?(@post.link)
-      redirect_to @post.link
-    else
-      redirect_to "http://www.nooooooooooooooo.com/"
-    end
-  end
-
   def create
     @post = Post.new(post_params)
     if @post.save
