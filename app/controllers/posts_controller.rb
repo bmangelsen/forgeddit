@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  include PostsHelper
   def index
     @posts = Post.order(created_at: :desc)
   end

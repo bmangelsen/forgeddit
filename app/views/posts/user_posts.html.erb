@@ -11,6 +11,7 @@
     <% if post.user_id == current_user.id %>
       <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-default btn-success btn-xs' %>
       <%= link_to "Delete", post_path(post.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
+      <%= link_to "View Comments", post_comments_path(post.id), class: 'btn btn-default btn-info btn-xs' %>
     <% end %>
   </div>
 </div>
