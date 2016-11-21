@@ -1,13 +1,4 @@
 class CommentsController < ApplicationController
-  def post_comments
-    @post = Post.find(params[:post_id])
-    @comments = Comment.where(post_id: "#{@post.id}").order(created_at: :desc)
-  end
-
-  def user_comments
-    @comments = Comment.where(user_id: "#{current_user.id}").order(created_at: :desc)
-  end
-
   def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new

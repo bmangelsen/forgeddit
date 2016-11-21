@@ -1,11 +1,6 @@
 class PostsController < ApplicationController
-  include PostsHelper
   def index
     @posts = Post.order(created_at: :desc)
-  end
-
-  def user_posts
-    @posts = Post.where(user_id: "#{current_user.id}").order(created_at: :desc)
   end
 
   def new
