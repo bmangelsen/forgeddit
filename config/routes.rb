@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     # resources :comments, only: [:index], action: :user_comments
   end
 
-  resources :user_posts, only [:index, :edit, :destroy]
-  resources :user_comments, only [:index, :create, :edit, :destroy]
-  resources :post_comments, only [:index, :create, :edit, :destroy]
+  resources :user_posts, only: [:index, :edit, :destroy]
+  resources :user_comments, only: [:index, :create, :edit, :destroy]
+  resources :post_comments, only: [:index, :create, :edit, :destroy]
 
   # resources :posts do
   #   resources :comments, only: [:new, :create, :edit, :destroy, :update]
