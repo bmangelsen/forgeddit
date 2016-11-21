@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
   def index
+    @vote = Vote.new
     @posts = Post.order(created_at: :desc)
   end
 
   def user_posts
+    @vote = Vote.new
     @posts = Post.where(user_id: "#{current_user.id}").order(created_at: :desc)
   end
 

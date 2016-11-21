@@ -22,11 +22,25 @@ span {
 }
 
 #options {
-  display: inline-block;
-  vertical-align: center;
   float: right;
+  padding-right: 5px;
+  display: inline-block;
 }
 
 #main {
   display: inline-block;
+}
+
+#voting {
+  float: right;
+}
+
+#buttons {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.new_vote {
+  float: left;
+  padding-right: 5px;
 }

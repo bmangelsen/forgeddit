@@ -6,13 +6,33 @@
 <div>
   <div id="main">
     <%= link_to "#{post.name}", post.link %>
+    <p font-size="4"> Created at: <%= post.created_at %></p>
   </div>
   <div id="options">
-    <% if post.user_id == current_user.id %>
-      <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-default btn-success btn-xs' %>
-      <%= link_to "Delete", post_path(post.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
-      <%= link_to "View Comments", post_comments_path(post.id), class: 'btn btn-default btn-info btn-xs' %>
-    <% end %>
+    <div id="voting">
+      <% if current_user %>
+        <%= form_for @vote, :url => votes_path do |f| %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :post_id, value: post.id %>
+          <%= f.hidden_field :value, value: -1 %>
+          <%= f.submit "-", class: 'btn btn-default btn-primary btn-xs' %>
+        <% end %>
+        <%= form_for @vote, :url => votes_path do |f| %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :post_id, value: post.id %>
+          <%= f.hidden_field :value, value: 1 %>
+          <%= f.submit "+", class: 'btn btn-default btn-primary btn-xs' %>
+        <% end %>
+        Post points: <%= Vote.where(post_id: "#{post.id}").sum(:value) %>
+      <% end %>
+    </div>
+    <div id="buttons">
+        <% if post.user_id == current_user.id %>
+          <%= link_to "Edit", edit_post_path(post.id), class: 'btn btn-default btn-success btn-xs' %>
+          <%= link_to "Delete", post_path(post.id), method: :delete, class: 'btn btn-default btn-danger btn-xs' %>
+          <%= link_to "View Comments", post_comments_path(post.id), class: 'btn btn-default btn-info btn-xs' %>
+        <% end %>
+    </div>
   </div>
 </div>
   <hr>
