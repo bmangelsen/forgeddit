@@ -23,8 +23,8 @@
             <%= f.hidden_field :value, value: 1 %>
             <%= f.submit "+", class: 'btn btn-default btn-primary btn-xs' %>
           <% end %>
-          Post points: <%= Vote.where(post_id: "#{post.id}").sum(:value) %>
         <% end %>
+        Post points: <%= Vote.where(post_id: "#{post.id}").sum(:value) %>
       </div>
       <div id="buttons">
         <% if current_user %>
