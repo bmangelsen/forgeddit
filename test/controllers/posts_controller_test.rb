@@ -51,7 +51,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test "can delete post" do
     new_session(:ben)
     delete post_path(posts(:bens_post).id)
-    assert 2, Post.count
+    assert_equal 2, Post.count
   end
 
   test "render create view when post does not save on create" do

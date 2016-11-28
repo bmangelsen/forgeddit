@@ -20,9 +20,11 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/bmangelsen/code/projects/forgeddit/app/models/user.rb": [
+        1,
         1,
         1,
         1,
@@ -46,6 +48,86 @@
       ],
       "/Users/bmangelsen/code/projects/forgeddit/app/models/vote.rb": [
         1,
+        1,
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        29,
+        null,
+        29,
+        28,
+        28,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        166,
+        null,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/votes_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/bmangelsen/code/projects/forgeddit/app/controllers/votes_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/bmangelsen/code/projects/forgeddit/app/controllers/users_controller.rb": [
@@ -95,84 +177,6 @@
         null,
         1,
         12,
-        null,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        166,
-        null,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/comments_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/posts_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/sessions_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/votes_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/controllers/sessions_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        29,
-        null,
-        29,
-        28,
-        28,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/bmangelsen/code/projects/forgeddit/app/controllers/votes_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
         null,
         null
       ],
@@ -301,6 +305,6 @@
         0
       ]
     },
-    "timestamp": 1479764544
+    "timestamp": 1480351286
   }
 }
